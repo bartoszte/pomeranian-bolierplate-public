@@ -1,0 +1,13 @@
+.roundedImage{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-position: center;
+    background-size: contain;
+    background-color: lightgrey;
+
+    filter: grayscale(100%);
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+}
+

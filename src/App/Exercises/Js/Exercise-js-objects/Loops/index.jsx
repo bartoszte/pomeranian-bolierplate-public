@@ -15,6 +15,48 @@ function sameNumbers(table1, table2) {
   return checkDuplicateInArray(mergedTable1d);
 }
 
+function sameNumbersBt(arrayOne, arrayTwo) {
+  for (const valueArrayOne of arrayOne) {
+    for (const valueArrayTwo of arrayTwo) {
+      if (valueArrayOne === valueArrayTwo) {
+        console.log(valueArrayOne);
+      }
+    }
+  }
+}
+
+function averageFromArray(arr1) {
+  let sumOfValues = 0;
+  for (const valueArr1 of arr1) {
+    sumOfValues += valueArr1;
+  }
+  return sumOfValues / arr1.length;
+}
+
+const sampleNumbersArray2 = [2, 2, 2];
+function averageFromArray2(array01) {
+  const sumOfValues2 = array01.reduce(
+    (previousValue, currentValue) => previousValue + currentValue,
+    0
+  );
+  return sumOfValues2 / array01.length;
+}
+
+function reverseFun(array) {
+  return array.reverse();
+}
+
+const people = [
+  { name: 'John', age: 16 },
+  { name: 'Emily', age: 26 },
+  { name: 'Peter', age: 36 },
+];
+
+function getNames(array) {
+  const names = array.map((person) => person.name);
+  return names;
+}
+
 export function Loops() {
   const peopleSampleDataArray = [
     { id: 1, name: 'John', age: 35, address: 'Gdańsk' },
@@ -86,6 +128,33 @@ export function Loops() {
   console.log(totalAgeVar, 'tablica totalAgeVar');
 
   console.log(sameNumbers([1, 2, 3, 4, 5], [3, 5, 7, 9]));
+
+  sameNumbersBt([1, 2, 3, 4, 5], [3, 5, 7, 9]);
+
+  /////////////////////////////////////////////////////////////////////////////////
+  // zajecia 14.10.2023
+  //
+
+  console.log(
+    averageFromArray([1, 2, 3, 4, 5, 6]),
+    'srednia elementow tablicy'
+  );
+
+  console.log(averageFromArray([2, 2, 2]), 'srednia elementow tablicy');
+
+  console.log(
+    averageFromArray2(sampleNumbersArray2),
+    'srednia elementow tablicy z uzyciem reduce'
+  );
+
+  console.log(
+    averageFromArray2([1, 2, 3, 4, 5, 6]),
+    'srednia elementow tablicy z uzyciem reduce'
+  );
+
+  console.log(reverseFun([1, 2, 3, 4, 5]), 'odwrocona tablica');
+
+  console.log(getNames(people));
 
   return (
     <div className="container--loops">

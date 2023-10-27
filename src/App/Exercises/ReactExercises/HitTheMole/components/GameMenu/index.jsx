@@ -1,7 +1,7 @@
 import { GenericButton } from '../GenericButton';
 import { MenuField } from '../MenuField';
 
-export const GameMenu = ({ stopGame, time }) => {
+export const GameMenu = ({ stopGame, time, score }) => {
   const handleStop = () => {
     stopGame();
   };
@@ -14,7 +14,7 @@ export const GameMenu = ({ stopGame, time }) => {
 
       <MenuField title="Wynik">
         {/* <button>16</button> */}
-        <GenericButton isDisabled>16</GenericButton>
+        <GenericButton isDisabled>{score}</GenericButton>
       </MenuField>
 
       <MenuField title="Przyciski sterujące">

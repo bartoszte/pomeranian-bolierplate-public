@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './styles.css';
 import { generateArrayOfFields, generateRandomNumbForMole } from '../../helper';
 
-export const PlayGround = ({ molePositionId }) => {
+export const PlayGround = ({ molePositionId, score, setScore }) => {
   const [gameFields, setGameFields] = useState(generateArrayOfFields(10));
   // const [molePositionId, setMolePositionId] = useState(
   //   generateRandomNumbForMole(10)
@@ -10,6 +10,7 @@ export const PlayGround = ({ molePositionId }) => {
   // console.log(gameFields, molePositionId);
 
   const handleFieldClick = (id, isMolePresent) => {
+    handleUpdateScore(isMolePresent);
     setGameFields((prevState) =>
       prevState.map((field) => {
         return {
@@ -29,6 +30,10 @@ export const PlayGround = ({ molePositionId }) => {
       );
     }, 200);
   };
+
+  const handleUpdateScore = (isMolePresent) => {
+    isMolePresent ? setScore((prevScore) => prevScore + 1) : setScore((prevScore) => prevScore - 1);
+  }
 
   return (
     <div>

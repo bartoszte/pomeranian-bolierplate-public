@@ -8,6 +8,7 @@ export const HitTheMole = () => {
   const [initialTime, setInitialTime] = useState(60);
   const [moleAmount, setMoleAmount] = useState(1);
   const [isGameStarted, setIsGameStarted] = useState(false);
+  const [isGameEnded, setGameEnded] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
   const [score, setScore] = useState(0);
   const [timeVar, setTimeVar] = useState(60);
@@ -17,6 +18,9 @@ export const HitTheMole = () => {
   );
 
   const handleStartGame = () => {
+    setTimeVar(initialTime);
+    setScore(0);
+    setGameEnded(false);
     setIsGameStarted(true);
     const interval = setInterval(() => {
       setMolePositionId(generateRandomNumbForMole(10));
@@ -27,6 +31,7 @@ export const HitTheMole = () => {
 
   const handleStopGame = () => {
     setIsGameStarted(false);
+    setGameEnded(true);
     clearInterval(intervalId);
     setIntervalId(null);
   };
@@ -48,6 +53,8 @@ export const HitTheMole = () => {
   useEffect(() => {
     if (timeVar === 0) {
       handleStopGame();
+      setGameEnded(true);
+
     }
   }, [timeVar]);
 
@@ -63,6 +70,8 @@ export const HitTheMole = () => {
       </div>
       {/* StartMenu */}
 
+      {isGameEnded && <div>Gratulacje! Udało Ci się złapać kreta {score} razy w czasie{' '}{initialTime-timeVar} sekund</div>}
+
       {!isGameStarted ? (
         <StartMenu
           setInitialTime={setInitialTime}
@@ -72,9 +81,9 @@ export const HitTheMole = () => {
       ) : (
         <>
           {/* GameMenu */}
-          <GameMenu time={timeVar} stopGame={handleStopGame} />
+          <GameMenu time={timeVar} score={score} stopGame={handleStopGame} />
           {/* Playground */}
-          <PlayGround molePositionId={molePositionId} />
+          <PlayGround score={score} setScore={setScore} molePositionId={molePositionId} />
         </>
       )}
     </div>

@@ -1,0 +1,19 @@
+.container--user-object {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.container--user-object input {
+    width: 200px;
+    height: 40px;
+}
+
+.container--user-object button {
+    width: 200px;
+    height: 30px;
+}
+
+.container--user-object .margin-top {
+  margin-top: 20px;
+}

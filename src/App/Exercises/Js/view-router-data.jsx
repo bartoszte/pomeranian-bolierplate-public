@@ -21,6 +21,8 @@ import { JsSlidingBannerMetaData } from './JsSlidingBanner/router-data';
 import { MemoGameMetaData } from './MemoGame/router-data';
 import { OOPMetaData } from './ObjectOrientedProgramming/router-data';
 import { PracticeMetaData } from './Practice/router-data';
+import { JsStorageMetaData } from './JsStorage/router-data';
+import { SavedInputMetaData } from './SavedInput/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -44,5 +46,7 @@ export const blockRouterMetaData = [
   MemoGameMetaData,
   OOPMetaData,
   PracticeMetaData,
+  JsStorageMetaData,
+  SavedInputMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

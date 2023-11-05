@@ -23,6 +23,9 @@ import { OOPMetaData } from './ObjectOrientedProgramming/router-data';
 import { PracticeMetaData } from './Practice/router-data';
 import { JsStorageMetaData } from './JsStorage/router-data';
 import { SavedInputMetaData } from './SavedInput/router-data';
+import { PromisesAndMeMetaData } from './PromisesAndMe/router-data';
+import { UseEffectAndPromiseExerciseMetaData } from './UseEffectAndPromiseExercise/router-data';
+import { PromisesMethodsMetaData } from './PromisesMethods/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -48,5 +51,8 @@ export const blockRouterMetaData = [
   PracticeMetaData,
   JsStorageMetaData,
   SavedInputMetaData,
+  PromisesAndMeMetaData,
+  UseEffectAndPromiseExerciseMetaData,
+  PromisesMethodsMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

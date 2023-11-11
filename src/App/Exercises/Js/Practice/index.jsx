@@ -12,6 +12,9 @@ export const Practice = () => {
     images: ['profile.png', 'random.jpg'],
   });
 
+  // destrukturyzacja obiektu user
+  const { name, email } = user;
+
   const increaseNumber = (val) => {
     setNumber(number + val);
     return number;
@@ -36,7 +39,8 @@ export const Practice = () => {
     setUser((prevObj) => ({ ...prevObj, [ev.target.name]: ev.target.value }));
   };
 
-  console.log(user);
+  // console.log(user);
+  console.log(name, email);
 
   return (
     <div>

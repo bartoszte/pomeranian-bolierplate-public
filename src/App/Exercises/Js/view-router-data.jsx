@@ -28,6 +28,7 @@ import { UseEffectAndPromiseExerciseMetaData } from './UseEffectAndPromiseExerci
 import { PromisesMethodsMetaData } from './PromisesMethods/router-data';
 import { asyncAwaitMetaData } from './AsyncAwait/router-data';
 import { TryCatchFinallyMetaData } from './TryCatchFinally/router-data';
+import { TestedComponentMetaData } from './Testing/router-data';
 
 export const blockRouterMetaData = [
   blockRouterMetaDataJsVariables1,
@@ -58,5 +59,6 @@ export const blockRouterMetaData = [
   PromisesMethodsMetaData,
   asyncAwaitMetaData,
   TryCatchFinallyMetaData,
+  TestedComponentMetaData,
 ];
 export const blockRouterData = getParsedRouterDataList(blockRouterMetaData);

@@ -1,0 +1,22 @@
+.dashboardGeneral{
+
+}
+
+.dashboard {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dashboard .dashboardLeft{
+  width: 665px;
+}
+
+.dashboard .dashboardRight{
+    display: flex;
+    width: 20.875rem;
+    height: 22.5rem;
+    padding-top: 2.81rem;
+    padding-left: 1.44rem;
+  }
+  
+

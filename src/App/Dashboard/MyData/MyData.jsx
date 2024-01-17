@@ -3,12 +3,13 @@ import snowWolf from '../../Images/snow-wolf.png';
 
 import './styles.css';
 
-export const MyData = () => {
+export const MyData = ({ extraStyle = '' }) => {
+  const className = `generalMyData ${extraStyle}`;
   return (
-    <div className="generalMyData">
+    <div className={className}>
       <RoundedImage src={snowWolf} size={{ width: 90, height: 90 }} />
       <div className="myDataGeneral">
-        <h3>Bartosz</h3>
+        <h3>Bartosz Tarnopolski</h3>
         <div>Wroclaw</div>
       </div>
       <div className="myDataMail">

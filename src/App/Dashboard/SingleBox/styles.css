@@ -1,3 +1,26 @@
+/* singleBox contains several objects */
+.singleBox{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+padding: 1rem;
+width: 180px;
+height: 170px;
+border: 1px solid lightgrey;
+border-radius: 3%;
+-webkit-box-shadow: 0px 0px 5px 1px rgb(148, 148, 148);
+-moz-box-shadow: 0px 0px 5px 1px rgb(148, 148, 148);
+box-shadow: 0px 0px 5px 1px rgb(148, 148, 148);
+}
+
+.singleBox:hover{
+    border: 1px solid crimson;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(254,55,86,1);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(254,55,86,1);
+    box-shadow: 0px 0px 10px 5px rgba(254,55,86,1);
+}
+
 .singleBox .title{
     color: #FE3756;
     /* text-align: center; */
@@ -9,11 +32,10 @@
 
 .singleBox .text{
     color: #000;
-    /* text-align: center; */
+    text-align: center;
     font-size: 0.75rem;
     font-weight: 400;
     line-height: 1.25rem; 
-    text-align: center;
 }
 
 .singleBox img{

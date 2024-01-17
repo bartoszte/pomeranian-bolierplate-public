@@ -1,22 +1,57 @@
-.dashboardGeneral{
+.dashboard-grid{
+display: grid;
+/* height: 800px; */
+/* grid-template-columns: repeat(4, 1fr); */
+grid-template-columns: repeat(3, 200px) 1fr;
+grid-template-rows: 100px 200px 200px;
+/* justify-items: center; */
+align-items: center;
+gap: 1rem;
+}
+
+
+
+.intro{
+  grid-column: 1/4;
 
 }
 
-.dashboard {
-    display: flex;
-    justify-content: space-between;
+
+.my-data{
+  grid-column: 4;
+  grid-row: 1/-1;
+  align-self: start;
+  justify-self: right;
+  padding-top: 3rem;
+  padding-left: 2rem;
 }
 
-.dashboard .dashboardLeft{
-  width: 665px;
-}
+@media screen and (max-width: 1000px) {
+    .dashboard-grid{
+      grid-template-columns: repeat(2, 200px) 1fr;
+      grid-template-rows: 1fr 200px 200px 200px;
+    }
 
-.dashboard .dashboardRight{
-    display: flex;
-    width: 20.875rem;
-    height: 22.5rem;
-    padding-top: 2.81rem;
-    padding-left: 1.44rem;
+    .intro{
+      grid-column: 1/3;
+    }
+
+    .my-data{
+      grid-column: 3;
+    }
   }
-  
 
+  @media screen and (max-width: 790px) {
+    .dashboard-grid{
+      grid-template-columns: 200px 1fr;
+      grid-template-rows: 1fr repeat(5, 200px);
+    }
+
+    .intro{
+      grid-column: 1/2;
+    }
+
+    .my-data{
+      grid-column: 2;
+    }
+  }
